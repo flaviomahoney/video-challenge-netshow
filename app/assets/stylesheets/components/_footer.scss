@@ -1,0 +1,30 @@
+$footer_height: 80px;
+
+#footer {
+  background: #383e56;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $footer_height;
+  padding: 0px 50px;
+  color: #e5e5e5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #89c9b8;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.list-group {
+  width: 200px;
+}
