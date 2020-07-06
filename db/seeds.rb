@@ -8,11 +8,16 @@
 
 puts"destroying the seeds..."
 User.destroy_all
-Course.destroy_all
-puts"seeds destroyed. Creating new seeds..."
+Video.destroy_all
+
 
 User.new(email: "flavio@gmail.com", password: '123456')
 User.new(email: "mahoney@gmail.com", password: '123456')
 
-Course.new(name: "Crazy Video", url: "https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8")
-Course.new(name: "Example Video", url: "https://example.com/index.m3u8")
+first_video = Video.new(name: "Crazy Video", url: "https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8")
+second_video = Video.new(name: "Example Video", url: "https://example.com/index.m3u8")
+
+first_video.save
+second_video.save
+
+puts"seeds destroyed. Creating new seeds..."
